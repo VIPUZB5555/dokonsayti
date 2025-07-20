@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% block title %}Bosh sahifa{% endblock %}
+{% block content %}
+<a class="btn" href="/add">➕ Mahsulot qo‘shish</a>
+<ul>
+    {% for product in products %}
+    <li>
+        {{ product[1] }} – {{ product[2] }} dona
+        {% if product[2] > 0 %}
+            <a class="sell-btn" href="/sell/{{ product[0] }}">Sotish</a>
+        {% else %}
+            <span class="out-of-stock">Zaxira tugadi</span>
+        {% endif %}
+        <a class="delete-btn" href="/delete/{{ product[0] }}">❌ O‘chirish</a>
+    </li>
+    {% endfor %}
+</ul>
+{% endblock %}
