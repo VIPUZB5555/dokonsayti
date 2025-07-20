@@ -1,0 +1,116 @@
+/* Umumiy uslublar */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(to right, #f9f9f9, #e9f0ff);
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 700px;
+    margin: 40px auto;
+    background: white;
+    padding: 30px 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Sarlavha */
+h1 {
+    text-align: center;
+    color: #333;
+    border-bottom: 2px solid #007bff;
+    padding-bottom: 10px;
+}
+
+/* Form elementlari */
+form input[type="text"],
+form input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+
+form button {
+    width: 100%;
+    padding: 12px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #218838;
+}
+
+/* Tugmalar */
+a.btn {
+    display: inline-block;
+    margin-bottom: 20px;
+    background-color: #007bff;
+    color: white;
+    padding: 10px 16px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a.btn:hover {
+    background-color: #0056b3;
+}
+
+/* Mahsulotlar ro‘yxati */
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    background: #f1f8ff;
+    margin-bottom: 10px;
+    padding: 15px;
+    border-radius: 6px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+li span,
+li a {
+    margin-left: 10px;
+}
+
+/* Tugmalar - sotish/o'chirish */
+a.sell-btn {
+    background-color: #28a745;
+    padding: 6px 10px;
+    border-radius: 4px;
+    color: white;
+    text-decoration: none;
+}
+
+a.sell-btn:hover {
+    background-color: #1e7e34;
+}
+
+a.delete-btn {
+    background-color: #dc3545;
+    padding: 6px 10px;
+    border-radius: 4px;
+    color: white;
+    text-decoration: none;
+}
+
+a.delete-btn:hover {
+    background-color: #bd2130;
+}
+
+.out-of-stock {
+    color: #dc3545;
+    font-weight: bold;
+}
