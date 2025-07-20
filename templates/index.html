@@ -2,12 +2,13 @@
 {% block title %}Bosh sahifa{% endblock %}
 {% block content %}
 <a class="btn" href="/add">➕ Mahsulot qo‘shish</a>
+<a class="btn" href="/import_excel">📥 Exceldan import</a>
 <ul>
     {% for product in products %}
     <li>
         {{ product[1] }} – {{ product[2] }} dona
         {% if product[2] > 0 %}
-            <a class="sell-btn" href="/sell/{{ product[0] }}">Sotish</a>
+            <a class="sell-btn" href="#" onclick="sotishMiqdori('{{ product[0] }}')">Sotish</a>
         {% else %}
             <span class="out-of-stock">Zaxira tugadi</span>
         {% endif %}
@@ -15,4 +16,17 @@
     </li>
     {% endfor %}
 </ul>
+
+<script>
+function sotishMiqdori(productId) {
+    let miqdor = prompt("Nechta mahsulot sotmoqchisiz?");
+    if (miqdor !== null && miqdor !== "") {
+        if (!isNaN(miqdor) && parseInt(miqdor) > 0) {
+            window.location.href = `/sell/${parseInt(productId)}?amount=${parseInt(miqdor)}`;
+        } else {
+            alert("Iltimos, to‘g‘ri raqam kiriting.");
+        }
+    }
+}
+</script>
 {% endblock %}
