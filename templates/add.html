@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+{% block title %}Mahsulot qo‘shish{% endblock %}
+{% block content %}
+<form method="post">
+    <input type="text" name="name" placeholder="Mahsulot nomi" required><br>
+    <input type="number" name="quantity" placeholder="Soni" required><br>
+    <button type="submit">Qo‘shish</button>
+</form>
+{% endblock %}
